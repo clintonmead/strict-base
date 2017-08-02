@@ -69,7 +69,7 @@ instance Applicative List where
 #endif
 
 instance Semigroup (List a) where
-  (<>) xl yl = go xl where
+  xl <> yl = go xl where
     go (x:!xs) = x :! go xs
     go Nil = yl
 
